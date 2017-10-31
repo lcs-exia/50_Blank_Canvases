@@ -13,7 +13,7 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 400, height: 600)
 
 /*:
  ## Add your code below
@@ -22,8 +22,29 @@ let canvas = Canvas(width: 400, height: 300)
  
  Use whitespace and comments as appropriate.
  */
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+// Draw Background
+canvas.translate(byX: 200, byY: 300)
+canvas.fillColor = Color.black
+canvas.drawRectangle(centreX: 0, centreY: 0, width: 400, height: 600)
 
+// Draw Shape of Ghost
+canvas.drawShapesWithBorders = false
+canvas.fillColor = Color.white
+canvas.drawEllipse(centreX: 0, centreY: 100, width: 300, height: 300)
+canvas.drawRectangle(centreX: 0, centreY: 0, width: 300, height: 200)
+canvas.fillColor = Color.black
+for y in stride(from: -60, through: 60, by: 120){
+    canvas.drawEllipse(centreX: y, centreY: -110, width: 70, height: 70)
+}
+for x in stride(from: -120, through: 150, by: 120){
+    canvas.drawEllipse(centreX: x, centreY: -100, width: 60, height: 60)
+}
+
+// Draw Eyes
+canvas.fillColor = Color.black
+canvas.drawEllipse(centreX: -70, centreY: 150, width: 60, height: 70)
+canvas.drawEllipse(centreX: 70, centreY: 150, width: 60, height: 70)
+canvas.drawEllipse(centreX: 0, centreY: 50, width: 60, height: 80)
 
 
 /*:

@@ -44,6 +44,8 @@ for x in stride(from: -120, through: 150, by: 120){
 canvas.fillColor = Color.black
 canvas.drawEllipse(centreX: -70, centreY: 150, width: 60, height: 70)
 canvas.drawEllipse(centreX: 70, centreY: 150, width: 60, height: 70)
+
+// Draw Mouth
 canvas.drawEllipse(centreX: 0, centreY: 50, width: 60, height: 80)
 
 
@@ -67,4 +69,5 @@ canvas.drawEllipse(centreX: 0, centreY: 50, width: 60, height: 80)
  */
 // Don't remove the code below
 PlaygroundPage.current.liveView = canvas.imageView
+canvas.copyToClipboard()
 

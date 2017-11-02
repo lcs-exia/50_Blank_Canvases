@@ -31,15 +31,30 @@ canvas.borderColor = Color.white
 canvas.defaultBorderWidth = 5
 for x in stride(from: 0, through: 500, by: 80){
     for y in stride(from: 300, through: 0, by: -100){
-    //let y = 0
+
         for z in stride(from: 60, through: 0, by: -12){
-//            canvas.drawEllipse(centreX: x+30, centreY: y-20, width: z, height: z)
+
             canvas.drawEllipse(centreX: x, centreY: y, width: z, height: z)
-//            canvas.drawEllipse(centreX: x-10, centreY: y-100, width: z, height: z)
         }
     }
 }
-
+for x in stride(from: 0, through: 500, by: 80){
+    for y in stride(from: 300, through: 0, by: -100){
+        
+        for z in stride(from: 60, through: 0, by: -12){
+                       canvas.drawEllipse(centreX: x+30, centreY: y-20, width: z, height: z)
+            
+        }
+    }
+}
+for x in stride(from: 0, through: 500, by: 80){
+    for y in stride(from: 300, through: 0, by: -100){
+        
+        for z in stride(from: 60, through: 0, by: -12){
+            canvas.drawEllipse(centreX: x-10, centreY: y-100, width: z, height: z)
+        }
+    }
+}
 /*:
  ## Use source control
  To keep your work organized, and receive feedback, source control is a must.

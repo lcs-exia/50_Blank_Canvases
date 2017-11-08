@@ -29,7 +29,7 @@ canvas.drawRectangle(centreX: 250, centreY: 150, width: 500, height: 300)
 // Draw first set of circles
 canvas.borderColor = Color.white
 canvas.defaultBorderWidth = 5
-for x in stride(from: 0, through: 500, by: 80){
+for x in stride(from: 0, through: 500, by: 70){
     for y in stride(from: 300, through: 0, by: -100){
 
         for z in stride(from: 60, through: 0, by: -12){
@@ -38,20 +38,20 @@ for x in stride(from: 0, through: 500, by: 80){
         }
     }
 }
-for x in stride(from: 0, through: 500, by: 80){
+for x in stride(from: 0, through: 500, by: 70){
     for y in stride(from: 300, through: 0, by: -100){
         
         for z in stride(from: 60, through: 0, by: -12){
-                       canvas.drawEllipse(centreX: x+30, centreY: y-20, width: z, height: z)
+                       canvas.drawEllipse(centreX: x+15, centreY: y-30, width: z, height: z)
             
         }
     }
 }
-for x in stride(from: 0, through: 500, by: 80){
+for x in stride(from: 0, through: 500, by: 70){
     for y in stride(from: 300, through: 0, by: -100){
-        
+
         for z in stride(from: 60, through: 0, by: -12){
-            canvas.drawEllipse(centreX: x-10, centreY: y-100, width: z, height: z)
+            canvas.drawEllipse(centreX: x+30, centreY: y-60, width: z, height: z)
         }
     }
 }
@@ -75,5 +75,6 @@ for x in stride(from: 0, through: 500, by: 80){
  */
 // Don't remove the code below
 PlaygroundPage.current.liveView = canvas.imageView
+canvas.copyToClipboard()
 
 
